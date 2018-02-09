@@ -61,7 +61,7 @@ void Permutaciones (){
 	Numeros[2]=Numero.substr(2, 1);
 	Numeros[3]=Numero.substr(3, 3);
 	for (int i=0;i<4;i++){
-		cout <<"NUMERO"<<Numeros[i];
+		cout <<""<<Numeros[i];
 	}
 	string letra1=Numeros[0];
 	string letra2=Numeros[1];
@@ -127,6 +127,16 @@ void fecha(){
 	int dia;
 	int mes;
 	int ano;
+//	int dia=0;
+      	int  Aleatorio=rand()%7+0;
+	string * Dias= new string[7];
+	Dias[0]="Lunes";
+	Dias[1]="Martes";
+	Dias[2]="Miercoles";
+	Dias[3]="JUeves";
+	Dias[4]="VIernes";
+	Dias[5]="Sabado";
+	Dias[6]="Domingo";
 	string Dia;
 	string Mes;
 	string Ano;
@@ -136,13 +146,22 @@ void fecha(){
 	while (Fecha.size()!=8){
 		cout<<"ingrese fecha"<<endl;
 		cin>>Fecha;
+		Ano=Fecha.substr(0,4);
+		Mes=Fecha.substr(4,2);
+		Dia=Fecha.substr(6,8);
+		if (Ano=="2018"||Dia=="09"){
+		
+		}else{
+			continue;
+		}
+
 	}
 
-	Dia=Fecha.substr(0,4);
+	Ano=Fecha.substr(0,4);
 	Mes=Fecha.substr(4,2);
-	Ano=Fecha.substr(6,8);
+	Dia=Fecha.substr(6,8);
 
-	cout <<" "<<Dia<< " "<<Mes<<" "<<Ano<<endl;
+	cout <<"DIA "<<Dia<< "MES "<<Mes<<"ANO "<<Ano<<endl;
 	mes =atoi(Mes.c_str());
 	switch (mes){
 		case 1:
@@ -193,5 +212,6 @@ void fecha(){
 
 			break;
 	}
-
+	cout << Dias[Aleatorio];
+	cout << Dia<< ", "<< Mes<< ", "<< Ano<<endl;
 }
