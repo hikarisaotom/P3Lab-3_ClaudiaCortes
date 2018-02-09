@@ -12,7 +12,7 @@ int main(){
 	switch (Respuesta){
 	case 1:{
 		cout << "selecciono Mediana"<<endl;
-
+		cout << "En construccion";
 		break;
 	       }
 	case 2:{
