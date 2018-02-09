@@ -95,7 +95,7 @@ void Permutaciones (){
 			}//tercer numero
 			letra3=permutacion.substr(2,1);
 			for (int j=0;j<4;j++){
-				cout << letra1<< " !="<<Numeros[j]<< letra2<< " !="<<Numeros[j]<< letra3<< " !="<<Numeros[j];
+				cout << letra1<< " != "<<Numeros[j]<<" - "<< letra2<< " != "<<Numeros[j]<<" - "<< letra3<< " != "<<Numeros[j]<<endl;
 				if (((Numeros[j])!=letra1)&&((Numeros[j])!=letra2)&&((Numeros[j])!=letra3)){
 					permutacion=permutacion+Numeros[j];
 					j=5;
@@ -130,6 +130,7 @@ void fecha(){
 //	int dia=0;
       	int  Aleatorio=rand()%7+0;
 	string * Dias= new string[7];
+	string * Fechas;
 	Dias[0]="Lunes";
 	Dias[1]="Martes";
 	Dias[2]="Miercoles";
