@@ -215,4 +215,5 @@ void fecha(){
 	}
 	cout << Dias[Aleatorio];
 	cout << Dia<< ", "<< Mes<< ", "<< Ano<<endl;
+	delete []Dias;
 }
