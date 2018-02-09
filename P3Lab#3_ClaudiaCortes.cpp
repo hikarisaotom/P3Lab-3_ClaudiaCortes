@@ -22,6 +22,7 @@ int main(){
 	       }
 	 case 3:{
 		cout<<"selecciono Fechas D:"<<endl;
+		fecha();
 		break;
 		}
 
@@ -59,6 +60,9 @@ void Permutaciones (){
 	Numeros[1]=Numero.substr(1, 1);
 	Numeros[2]=Numero.substr(2, 1);
 	Numeros[3]=Numero.substr(3, 3);
+	for (int i=0;i<4;i++){
+		cout <<"NUMERO"<<Numeros[i];
+	}
 	string letra1=Numeros[0];
 	string letra2=Numeros[1];
 	string letra3=Numeros[2];
@@ -81,6 +85,7 @@ void Permutaciones (){
 			letra1=permutacion.substr(0,1);
 			letra2=permutacion.substr(1,1);	
 			for (int j=0;j<4;j++){
+				 cout << letra1<< "!="<<Numeros[j];
 				if (((Numeros[j])!=letra1)&&((Numeros[j])!=letra2)){
 					permutacion=permutacion+Numeros[j];
 					j=5;	
@@ -90,6 +95,7 @@ void Permutaciones (){
 			}//tercer numero
 			letra3=permutacion.substr(2,1);
 			for (int j=0;j<4;j++){
+				cout << letra1<< " !="<<Numeros[j]<< letra2<< " !="<<Numeros[j]<< letra3<< " !="<<Numeros[j];
 				if (((Numeros[j])!=letra1)&&((Numeros[j])!=letra2)&&((Numeros[j])!=letra3)){
 					permutacion=permutacion+Numeros[j];
 					j=5;
@@ -99,6 +105,8 @@ void Permutaciones (){
 			}//cuarto numero
 			Permutaciones [contadortotal]=permutacion;
 		cout <<"LETRAS" <<letra1<<"-"<<letra2<<"-"<<letra3<<"-";
+		cout<<permutacion;
+	//	cout << Letra1<< "!="<<Numeros[j];
 			contadortotal++;		
 		}//fin del for que reccore todo 
 		primeronumero=Numeros[avance];
@@ -131,9 +139,59 @@ void fecha(){
 	}
 
 	Dia=Fecha.substr(0,4);
-	Mes=Fecha.substr(4,6);
+	Mes=Fecha.substr(4,2);
 	Ano=Fecha.substr(6,8);
 
 	cout <<" "<<Dia<< " "<<Mes<<" "<<Ano<<endl;
+	mes =atoi(Mes.c_str());
+	switch (mes){
+		case 1:
+			Mes="Enero";
+			break;
+		case 2:
+			Mes="Febrero";
+
+			break;
+		case 3:
+			Mes="Marzo";
+
+			break;
+		case 4:
+			Mes="Abril";
+
+			break;
+		case 5: 
+			Mes="Mayo";
+
+			break;
+		case 6:
+			Mes="Junio";
+
+			break;
+		case 7:
+			Mes="Julio";
+
+			break;
+		case 8: 
+			Mes="Agosto";
+
+			break;
+		case 9:
+			Mes="Septiembre";
+
+			break;
+		case 10:
+			Mes="Octubre";
+
+			break;
+		case 11:
+			Mes="Noviembre";
+
+			break;
+		case 12:
+			Mes="Diciembre";
+
+			break;
+	}
 
 }
